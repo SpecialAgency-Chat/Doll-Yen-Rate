@@ -1,0 +1,26 @@
+{
+  "name": "doll-yen-rate",
+  "version": "1.0.0",
+  "description": "@doll_yen_rate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpecialAgency-Chat/Doll-Yen-Rate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpecialAgency-Chat/Doll-Yen-Rate/issues"
+  },
+  "homepage": "https://github.com/SpecialAgency-Chat/Doll-Yen-Rate#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "node-cron": "^3.0.2",
+    "twitter-api-v2": "^1.12.7"
+  }
+}
