@@ -10,6 +10,7 @@ const tweet = async () => {
     ccy2: "JPY"
   }, { headers: { "Content-Type": "application/json" } });
   await API.readWrite.v1.tweet(`1ドル ${data[0]} 円`);
+  await axios.post(process.env.GAS_API, { current: data[0]}, { headers: { "Content-Type": "application/json"}  });
   console.log("Tweet Successful");
 }
 
