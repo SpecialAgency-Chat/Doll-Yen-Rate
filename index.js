@@ -19,7 +19,7 @@ const tweet = async () => {
     if ((data[0] - PREVIOUS) >= 2) {
       text += "\n⚠前回より2円以上上昇しています⚠";
     } else if (data[0] === PREVIOUS) {
-      text += " (前回と同じ)";
+      text += ` (前回と同じ ${new Date().valueOf()})`;
     }
   }
   PREVIOUS = data[0];
