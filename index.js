@@ -18,10 +18,12 @@ const tweet = async () => {
     }
     if ((data[0] - PREVIOUS) >= 2) {
       text += "\n⚠前回より2円以上上昇しています⚠";
+    } else if (data[0] === PREVIOUS) {
+      text += " (前回と同じ)";
     }
   }
   PREVIOUS = data[0];
-  await API.readWrite.v1.tweet(`1ドル ${data[0]} 円`);
+  await API.readWrite.v1.tweet(`1ドル ${data[0]} 円`).catch(() => {});
   await axios.post(process.env.GAS_API, { current: data[0]}, { headers: { "Content-Type": "application/json"}  });
   console.log("Tweet Successful");
 }
